@@ -9,10 +9,14 @@ import { authModalState } from "@/atoms/authModalAtom";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import Image from "next/image";
+import { BsList } from "react-icons/bs";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-type TopbarProps = {};
+type TopbarProps = {
+  problemPage?: boolean;
+};
 
-const Topbar: React.FC<TopbarProps> = () => {
+const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
   const [user] = useAuthState(auth);
 
   const notify = () => toast("Wow so easy!");
@@ -30,6 +34,32 @@ const Topbar: React.FC<TopbarProps> = () => {
         <Link href="/" className="h-[22px] flex-1">
           <Image src="/logo-full.png" alt="Logo" height={100} width={100} />
         </Link>
+
+        {problemPage && (
+					<div className='flex items-center gap-4 flex-1 justify-center'>
+						<div
+							className='flex items-center justify-center rounded bg-dark-fill-3 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer'
+							// onClick={() => handleProblemChange(false)}
+						>
+							<FaChevronLeft />
+						</div>
+						<Link
+							href='/'
+							className='flex items-center gap-2 font-medium max-w-[170px] text-dark-gray-8 cursor-pointer'
+						>
+							<div>
+								<BsList />
+							</div>
+							<p>Problem List</p>
+						</Link>
+						<div
+							className='flex items-center justify-center rounded bg-dark-fill-3 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer'
+							// onClick={() => handleProblemChange(true)}
+						>
+							<FaChevronRight />
+						</div>
+					</div>
+				)}
 
         <div className="flex items-center space-x-4 flex-1 justify-end">
           <div>
@@ -76,7 +106,7 @@ const Topbar: React.FC<TopbarProps> = () => {
             </div>
           )}
           {user && <Logout />}
-          <button onClick={notify}>Notify!</button>
+          {/* <button onClick={notify}>Notify!</button> */}
         </div>
       </div>
     </nav>
