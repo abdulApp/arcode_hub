@@ -8,6 +8,7 @@ import { useRouter } from "next/router";
 import { authModalState } from "@/atoms/authModalAtom";
 import { toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import Image from "next/image";
 
 type TopbarProps = {};
 
@@ -27,7 +28,7 @@ const Topbar: React.FC<TopbarProps> = () => {
         max-w-[1200px] mx-auto`}
       >
         <Link href="/" className="h-[22px] flex-1">
-          <img src="/logo-full.png" alt="Logo" height={100} width={100} />
+          <Image src="/logo-full.png" alt="Logo" height={100} width={100} />
         </Link>
 
         <div className="flex items-center space-x-4 flex-1 justify-end">
