@@ -6,11 +6,15 @@ import Logout from "../Buttons/Logout";
 import { useSetRecoilState } from "recoil";
 import { useRouter } from "next/router";
 import { authModalState } from "@/atoms/authModalAtom";
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 type TopbarProps = {};
 
 const Topbar: React.FC<TopbarProps> = () => {
   const [user] = useAuthState(auth);
+
+  const notify = () => toast("Wow so easy!");
 	
   const setAuthModalState = useSetRecoilState(authModalState);
 	
@@ -71,6 +75,7 @@ const Topbar: React.FC<TopbarProps> = () => {
             </div>
           )}
           {user && <Logout />}
+          <button onClick={notify}>Notify!</button>
         </div>
       </div>
     </nav>
