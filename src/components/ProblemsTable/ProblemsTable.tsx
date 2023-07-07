@@ -7,13 +7,13 @@ import { IoClose } from "react-icons/io5";
 import YouTube from "react-youtube";
 
 type ProblemsTableProps = {
-  // setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>;
+  setLoadingProblems: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const ProblemsTable: React.FC<ProblemsTableProps> = (
-// {
-//   setLoadingProblems,
-// }
+{
+  setLoadingProblems,
+}
 ) => {
   const [youtubePlayer, setYoutubePlayer] = useState({
     isOpen: false,
