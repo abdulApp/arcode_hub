@@ -52,6 +52,16 @@ export default function Home() {
             />
           </table>
         </div>
+        <form action="">
+          <input type="text" placeholder="problem id" name="id" />
+          <input type="text" placeholder="title" name="title" />
+          <input type="text" placeholder="difficulty" name="difficulty" />
+          <input type="text" placeholder="category" name="category" />
+          <input type="text" placeholder="order" name="order" />
+          <input type="text" placeholder="link?" name="link" />
+          <input type="text" placeholder="videoID?" name="videoID" />
+          <button>save to db</button>
+        </form>
       </main>
     </>
   );
