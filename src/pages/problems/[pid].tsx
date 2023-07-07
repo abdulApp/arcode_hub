@@ -13,3 +13,7 @@ const ProblemPage: React.FC<ProblemPageProps> = () => {
   );
 };
 export default ProblemPage;
+
+// fetch the local data
+//  SSG
+// getStaticPaths => it create the dynamic routes
