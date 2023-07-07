@@ -2,10 +2,13 @@ import React from "react";
 import Split from "react-split";
 import ProblemDescription from "./ProblemDescription/ProblemDescription";
 import Playground from "./Playground/Playground";
+import { Problem } from "@/utils/types/problem";
 
-type WorkspaceProps = {};
+type WorkspaceProps = {
+  problem: Problem;
+};
 
-const Workspace: React.FC<WorkspaceProps> = () =>
+const Workspace: React.FC<WorkspaceProps> = ({ problem }) =>
   // { problem }
   {
     // const { width, height } = useWindowSize();
@@ -15,13 +18,13 @@ const Workspace: React.FC<WorkspaceProps> = () =>
     return (
       <Split className="split" minSize={0}>
         <ProblemDescription
-        // problem={problem}
+        problem={problem}
         // _solved={solved}
         />
-				<Playground 
-          // problem={problem} 
-          // setSuccess={setSuccess} 
-          // setSolved={setSolved} 
+        <Playground
+        // problem={problem}
+        // setSuccess={setSuccess}
+        // setSolved={setSolved}
         />
         {/* <div className='bg-dark-fill-2'>
 				{success && <Confetti gravity={0.3} tweenDuration={4000} width={width - 1} height={height - 1} />}
