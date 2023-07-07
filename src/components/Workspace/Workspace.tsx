@@ -22,7 +22,7 @@ const Workspace: React.FC<WorkspaceProps> = ({ problem }) =>
         // _solved={solved}
         />
         <Playground
-        // problem={problem}
+        problem={problem}
         // setSuccess={setSuccess}
         // setSolved={setSolved}
         />
