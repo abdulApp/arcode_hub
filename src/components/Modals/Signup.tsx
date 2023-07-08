@@ -5,6 +5,7 @@ import { useSetRecoilState } from "recoil";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { useRouter } from "next/router";
 import { doc, setDoc } from "firebase/firestore";
+import { toast } from "react-toastify";
 // import { toast } from "react-toastify";
 
 type SignupProps = {};
@@ -31,16 +32,36 @@ const Signup: React.FC<SignupProps> = () => {
     if (!inputs.email || !inputs.password || !inputs.displayName)
       return alert("Please fill all fields");
     try {
+      toast.loading("Creating your account", {
+        position: "top-center",
+        toastId: "loadingToast",
+      });
       console.log("here");
       const newUser = await createUserWithEmailAndPassword(
         inputs.email,
         inputs.password
       );
-      console.log("here1");
       if (!newUser) return;
+      const userData = {
+        uid: newUser.user.uid,
+        email: newUser.user.email,
+        displayName: inputs.displayName,
+        createdAt: Date.now(),
+        updatedAt: Date.now(),
+        likedProblems: [],
+        dislikedProblems: [],
+        solvedProblems: [],
+        starredProblems: [],
+      };
+      await setDoc(doc(firestore, "users", newUser.user.uid), userData);
       router.push("/");
     } catch (error: any) {
-      alert(error.message);
+      // alert(error.message);
+      toast.error(error.message, {
+        position: "top-center",
+      });
+    } finally {
+      toast.dismiss("loadingToast");
     }
     console.log("regist");
   };
