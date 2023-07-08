@@ -3,8 +3,6 @@ import { Inter } from "next/font/google";
 import Topbar from "@/components/Topbar/Topbar";
 import ProblemsTable from "@/components/ProblemsTable/ProblemsTable";
 import { useState } from "react";
-import { firestore } from "@/firebase/firebase";
-import { doc, setDoc } from "firebase/firestore";
 
 const inter = Inter({ subsets: ["latin"] });
 
