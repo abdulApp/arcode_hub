@@ -21,6 +21,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 	const [user] = useAuthState(auth);
 	const setAuthModalState = useSetRecoilState(authModalState);
 	const router = useRouter();
+	// console.log(router.query);
 
 	const handleProblemChange = (isForward: boolean) => {
 		const { order } = problems[router.query.pid as string] as Problem;
