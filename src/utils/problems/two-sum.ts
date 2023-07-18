@@ -39,7 +39,7 @@ export const twoSum: Problem = {
   id: "two-sum",
   title: "1. Two Sum",
   problemStatement: `<p class='mt-3'>
-  تُعطىك مصفوفة من الأعداد الصحيحة (integer) <code>nums</code> وعدد صحيح <code>target</code>. يُرجى أن تعيد <em>فهارس (indices)</em> العناصر الاثنين التي يكون مجموعهما يساوي <code>target</code>.
+	تُعطىك مصفوفة من الأعداد الصحيحة <code>nums</code> وعدد صحيح <code>target</code>، والمطلوب هو أن ترجع <em>فهارس (indices) الرقمين</em> اللذين يجمعان إلى <code>target</code>.
 </p>
 <p class='mt-3'>
 يُمكنك أن تفترض أن لكل إدخال حلاً واحدًا بالضبط، ولا يجوز استخدام نفس العنصر مرتين.
