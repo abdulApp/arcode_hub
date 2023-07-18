@@ -37,14 +37,14 @@ const handlerTwoSum = (fn: any) => {
 
 export const twoSum: Problem = {
   id: "two-sum",
-  title: "1. Two Sum",
+  title: "1. مجموع اثنين",
   problemStatement: `<p class='mt-3'>
-	تُعطىك مصفوفة من الأعداد الصحيحة <code>nums</code> وعدد صحيح <code>target</code>، والمطلوب هو أن ترجع <em>فهارس (indices) الرقمين</em> اللذين يجمعان إلى <code>target</code>.
-</p>
+  ترجع الدالة، بناءً على مصفوفة الأعداد الصحيحة <code>nums</code> والعدد الصحيح <code>target</code>، <em>المؤشرات (الأوسمة) لاثنين من الأرقام بحيث يكون مجموعهما يساوي</em> <code>target</code>.
 <p class='mt-3'>
-يُمكنك أن تفترض أن لكل إدخال حلاً واحدًا بالضبط، ولا يجوز استخدام نفس العنصر مرتين.
+  يمكنك أن تفترض أن لكل إدخال حلاً <strong>واحداً فقط</strong>، ولا يمكنك استخدام نفس العنصر مرتين.
 </p>
-<p class='mt-3'>يمكنك أن تعيد الإجابة بأي ترتيب تريده.</p>`,
+<p class='mt-3'>يمكنك أن تعيد الإجابة بأي ترتيب تريده.</p>
+`,
   examples: [
     {
       id: 1,
@@ -72,7 +72,7 @@ export const twoSum: Problem = {
 <code>-10 ≤ target ≤ 10</code>
 </li>
 <li class='mt-2 text-sm'>
-<strong>Only one valid answer exists.</strong>
+<strong>توجد إجابة واحدة صالحة فقط.</strong>
 </li>`,
   handlerFunction: handlerTwoSum,
   starterCode: starterCodeTwoSum,

@@ -64,7 +64,7 @@ const Topbar: React.FC<TopbarProps> = ({ problemPage }) => {
 							<div>
 								<BsList />
 							</div>
-							<p>Problem List</p>
+							<p>قائمة المشاكل</p>
 						</Link>
 						<div
 							className='flex items-center justify-center rounded bg-dark-fill-3 hover:bg-dark-fill-2 h-8 w-8 cursor-pointer'

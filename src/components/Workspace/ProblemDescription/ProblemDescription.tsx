@@ -154,7 +154,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 	};
 
 	return (
-		<div className='bg-dark-layer-1' >
+		<div className='bg-dark-layer-1' dir="rtl">
 			{/* TAB */}
 			<div className='flex h-11 w-full items-center pt-2 bg-dark-layer-2 text-white overflow-x-hidden'>
 				<div className={"bg-dark-layer-1 rounded-t-[5px] px-5 py-[10px] text-xs cursor-pointer"}>
@@ -231,9 +231,9 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 						<div className='mt-4'>
 							{problem.examples.map((example, index) => (
 								<div key={example.id}>
-									<p className='font-medium text-white '>Example {index + 1}: </p>
+									<p className='font-medium text-white '>مثال {index + 1}: </p>
 									{example.img && <img src={example.img} alt='' className='mt-3' />}
-									<div className='example-card'>
+									<div className='example-card' dir="ltr">
 										<pre>
 											<strong className='text-white'>Input: </strong> {example.inputText}
 											<br />
@@ -252,7 +252,7 @@ const ProblemDescription: React.FC<ProblemDescriptionProps> = ({ problem, _solve
 
 						{/* Constraints */}
 						<div className='my-8 pb-4'>
-							<div className='text-white text-sm font-medium'>Constraints:</div>
+							<div className='text-white text-sm font-medium'>القيود:</div>
 							<ul className='text-white ml-5 list-disc '>
 								<div dangerouslySetInnerHTML={{ __html: problem.constraints }} />
 							</ul>
