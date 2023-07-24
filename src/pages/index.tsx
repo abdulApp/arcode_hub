@@ -31,7 +31,7 @@ export default function Home() {
               ))}
             </div>
           )}
-          <table className="text-sm text-left text-gray-500 dark:text-gray-400 sm:w-7/12 w-full max-w-[1200px] mx-auto">
+          <table className="text-sm text-left text-gray-500 dark:text-gray-400 sm:w-7/12 w-full max-w-[1200px] mx-auto" dir="rtl">
             {!loadingProblems && (
               <thead className="text-xs text-gray-700 uppercase dark:text-gray-400 border-b ">
                 <tr>

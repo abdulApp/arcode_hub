@@ -36,7 +36,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 
 	return (
 		<>
-			<tbody className='text-white'>
+			<tbody className='text-white' dir="rtl">
 				{problems.map((problem, idx) => {
 					const difficulyColor =
 						problem.difficulty === "Easy"
@@ -67,7 +67,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 									</Link>
 								)}
 							</td>
-							<td className={`px-6 py-4 ${difficulyColor}`}>{problem.difficulty}</td>
+							<td className={`px-6 py-4 ${difficulyColor}`}>{problem.difficulty} 11</td>
 							<td className={"px-6 py-4"}>{problem.category}</td>
 							<td className={"px-6 py-4"}>
 								{problem.videoId ? (
