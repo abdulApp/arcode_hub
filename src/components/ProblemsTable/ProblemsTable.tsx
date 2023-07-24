@@ -58,7 +58,7 @@ const ProblemsTable: React.FC<ProblemsTableProps> = ({ setLoadingProblems }) => 
 									>
 										{problem.title}
 									</Link>
-								) : (
+								) : ( //
 									<Link
 										className='hover:text-blue-600 cursor-pointer'
 										href={`/problems/${problem.id}`}
