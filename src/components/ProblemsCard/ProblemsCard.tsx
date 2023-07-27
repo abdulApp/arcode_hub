@@ -78,9 +78,9 @@ const ProblemCard: React.FC<ProblemCardProps> = ({ problem, isSolved }) => {
   return (
     <>
       <div
-        className={`rounded-lg h-[220px] p-2 border relative ${
+        className={`rounded-lg h-[220px] w-[238px] p-2 border relative ${
           isSolved ? "border-green-500" : "border-gray-300"
-        } transition duration-300 ${problem.difficulty === "Easy" ? "bg-emerald-900" : problem.difficulty === "Medium" ? "bg-yellow-800" : "bg-red-900"}`}
+        } transition duration-300`}
       >
         <Link
           href={problem.link ? problem.link : `/problems/${problem.id}`}
@@ -91,7 +91,7 @@ const ProblemCard: React.FC<ProblemCardProps> = ({ problem, isSolved }) => {
           <div
             className={`rounded-lg p-4 border ${
               isSolved ? "border-green-500" : "border-gray-300"
-            } transition duration-300 bg-black hover:bg-blue-900 hover:shadow-lg`}
+            } transition duration-300 hover:bg-blue-900 hover:shadow-lg`}
           >
             <div className="flex items-center justify-between">
               <h3 className="font-medium text-dark-green-s">{problem.title}</h3>
@@ -116,7 +116,7 @@ const ProblemCard: React.FC<ProblemCardProps> = ({ problem, isSolved }) => {
           </div>
         </Link>
         <div
-          className="border bg-black p-2 mt-2 rounded-lg flex justify-between absolute bottom-2 w-[220px] mx-auto"
+          className="border p-2 mt-2 rounded-lg flex justify-between absolute bottom-0 left-0 w-full mx-auto"
           dir="rtl"
         >
           <p>الحل:</p>
