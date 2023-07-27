@@ -78,7 +78,7 @@ const ProblemCard: React.FC<ProblemCardProps> = ({ problem, isSolved }) => {
   return (
     <>
       <div
-        className={`rounded-lg h-[220px] w-[238px] p-2 border relative ${
+        className={`rounded-lg h-[220px] p-2 border relative ${
           isSolved ? "border-green-500" : "border-gray-300"
         } transition duration-300`}
       >
