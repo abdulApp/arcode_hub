@@ -27,7 +27,7 @@ const starterCodeJumpGameJS = `function canJump(nums) {
 
 export const jumpGame: Problem = {
   id: "jump-game",
-  title: "3. Jump Game",
+  title: "3.لعبة القفز",
   problemStatement: `<p class='mt-3'>
 	تُعطىك مصفوفة صحيحة (integer) تُسمى <code>nums</code>. أنت موجود في البداية عند <strong>الفهرس الأول</strong> في المصفوفة، وكل عنصر في المصفوفة يمثل القدرة القصوى للقفز في تلك الموقع.
   </p>

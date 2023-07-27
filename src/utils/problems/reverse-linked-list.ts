@@ -79,8 +79,8 @@ function reverseLinkedList(head) {
 
 export const reverseLinkedList: Problem = {
 	id: "reverse-linked-list",
-	title: "2. Reverse Linked List",
-	problemStatement: `<p class='mt-3'>Given the <code>head</code> of a singly linked list, reverse the list, and return <em>the reversed list</em>.</p>
+	title: "2.القوائم المترابطة العكسيه",
+	problemStatement: `<p class='mt-3'>يعتبر السؤال: "بالنظر إلى <code>head</code> لقائمة متسلسلة، قم بعكس القائمة وأعد <em>القائمة المعكوسة</em>."</p>
 	`,
 	examples: [
 		{
@@ -100,7 +100,7 @@ export const reverseLinkedList: Problem = {
 			outputText: "[1]",
 		},
 	],
-	constraints: `<li class='mt-2'>The number of nodes in the list is the range <code>[0, 5000]</code>.</li>
+	constraints: `<li class='mt-2'>عدد العقد في القائمة هو النطاق <code>[0, 5000]</code>.</li>
 <li class='mt-2'><code>-5000 <= Node.val <= 5000</code></li>`,
 	starterCode: starterCodeReverseLinkedListJS,
 	handlerFunction: reverseLinkedListHandler,
