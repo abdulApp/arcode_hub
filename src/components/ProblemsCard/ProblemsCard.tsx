@@ -33,7 +33,7 @@ const ProblemsCard: React.FC<ProblemsCardProps> = ({ setLoadingProblems }) => {
   }, []);
 
   return (
-    <div className="text-sm text-right border flex flex-wrap justify-around text-gray-500 dark:text-gray-400 sm:w-7/12 w-full max-w-[1200px] mx-auto">
+    <div className="text-sm text-right flex flex-wrap justify-around text-gray-500 dark:text-gray-400 sm:w-7/12 w-full max-w-[1200px] mx-auto">
       {problems.map((problem) => (
         <div key={problem.id} className="w-full sm:w-1/3 p-2">
           <ProblemCard
