@@ -17,7 +17,7 @@ const Navbar: React.FC<NavbarProps> = () => {
         <p className="text-white">
           <span className="text-[#ff842a] text-xl">{"<"}</span>
           <span className="border border-[#12c1ee] text-base rounded-md px-[2.5px] bg-[#12c1ee] text-black">
-            ar
+            AR
           </span>
           CODE_<span className="text-[#12c1ee]">HUB</span>
           <span className="text-[#ff842a] text-xl">{"/>"}</span>

@@ -72,7 +72,17 @@ const Signup: React.FC<SignupProps> = () => {
 
   return (
     <form className="space-y-6 px-6 pb-4" onSubmit={handleRegister}>
-      <h3 className="text-xl font-medium text-white">Register to LeetClone</h3>
+      <h3 className="text-xl font-medium text-white">
+        Register to{" "}
+        
+          <span className="text-[#ff842a] text-xl">{"<"}</span>
+          <span className="border border-[#12c1ee] text-xl rounded-md px-[2.5px] bg-[#12c1ee]">
+            AR
+          </span>
+          CODE_<span className="text-[#12c1ee]">HUB</span>
+          <span className="text-[#ff842a] text-xl">{"/>"}</span>
+        
+      </h3>
       <div>
         <label
           htmlFor="email"
